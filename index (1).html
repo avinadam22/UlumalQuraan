@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>خطة المذاكرة — علوم القرآن</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f1e7;--card:#fffdf8;--ink:#23302c;--mute:#74807a;--line:#e5dccb;--acc:#0f6b57;--acc2:#1d8f74;--accbg:#e2f0ea;--gold:#b8892b;--goldbg:#f7ecd0;--warn:#a8481f;--warnbg:#fbe9dd;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a17;--card:#17241f;--ink:#e9efe9;--mute:#93a39b;--line:#2a3a34;--acc:#4cc3a2;--acc2:#2f9e82;--accbg:#18352d;--gold:#e0b45a;--goldbg:#3a3017;--warn:#f0a074;--warnbg:#3b2418;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101a17;--card:#17241f;--ink:#e9efe9;--mute:#93a39b;--line:#2a3a34;--acc:#4cc3a2;--acc2:#2f9e82;--accbg:#18352d;--gold:#e0b45a;--goldbg:#3a3017;--warn:#f0a074;--warnbg:#3b2418;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal","Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;line-height:1.75}
+main{max-width:680px;margin:0 auto;padding:14px 14px 48px}
+.hero{background:linear-gradient(135deg,#0b4f41,#14866c);color:#fff;border-radius:20px;padding:20px 18px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero small{opacity:.85;font-size:.8rem}
+.hero h1{margin:2px 0 4px;font-size:1.5rem;font-weight:800}
+.hero p{margin:0;font-size:.9rem;opacity:.92}
+.tools{display:flex;gap:8px;margin:12px 0}
+.tools button,.btn{flex:1;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:8px 10px;font:inherit;font-size:.85rem;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center}
+.st b{display:block;font-size:1.45rem;color:var(--acc);font-weight:800;line-height:1.3}
+.st span{font-size:.75rem;color:var(--mute)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:12px;font-size:.9rem}
+.bar{height:10px;background:var(--line);border-radius:8px;overflow:hidden;margin:6px 0 2px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--gold));transition:width .35s}
+.late{background:var(--warnbg);color:var(--warn);border-radius:12px;padding:10px 14px;margin-bottom:12px;font-size:.9rem;display:none}
+.late.on{display:block}
+h2{font-size:1.05rem;margin:18px 2px 8px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;overflow:hidden}
+.day.today{border:2px solid var(--acc);box-shadow:0 4px 16px rgba(15,107,87,.12)}
+.day.rev{background:var(--goldbg);border-color:var(--gold)}
+.dh{display:flex;justify-content:space-between;align-items:center;width:100%;padding:11px 14px;background:none;border:0;color:inherit;font:inherit;text-align:right;cursor:pointer}
+.dh strong{font-weight:700}
+.tag{font-size:.7rem;background:var(--acc);color:#fff;border-radius:20px;padding:1px 9px;margin-inline-start:6px}
+.dm{font-size:.8rem;color:var(--mute)}
+.body{display:none;padding:0 14px 10px}
+.day.open .body{display:block}
+label{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line);cursor:pointer}
+input[type=checkbox]{width:21px;height:21px;margin-top:4px;accent-color:var(--acc);flex:none}
+label small{display:block;color:var(--mute);font-size:.8rem}
+input:checked+span{text-decoration:line-through;color:var(--mute)}
+.pill{display:inline-block;font-size:.72rem;border-radius:20px;padding:0 8px;margin-inline-end:6px;background:var(--accbg);color:var(--acc);font-weight:700}
+.pill.n{background:var(--goldbg);color:var(--gold)}.pill.m{background:var(--warnbg);color:var(--warn)}
+.note{color:var(--mute);font-size:.85rem}
+footer{text-align:center;color:var(--mute);font-size:.8rem;margin-top:24px}
+</style>
+</head>
+<body>
+<main>
+<div class="hero">
+  <small>برنامج بداية المفسر · المرحلة الأولى</small>
+  <h1>خطة المذاكرة — علوم القرآن</h1>
+  <p>أنيس الطلاب · النقاية للسيوطي · مختصر الإتقان</p>
+</div>
+<div class="tools">
+  <button id="theme">النمط الداكن</button>
+  <button id="copy">نسخ خطتي</button>
+  <button id="reset">تصفير</button>
+</div>
+<div class="stats">
+  <div class="st"><b id="dl">–</b><span>يوم لإغلاق الاختبار</span></div>
+  <div class="st"><b id="left">0</b><span>صفحة متبقية</span></div>
+  <div class="st"><b id="quota">0</b><span>صفحة مطلوبة اليوم</span></div>
+</div>
+<div class="box">
+  <b>نسبة الإنجاز: <span id="pct">0</span>%</b>
+  <div class="bar"><i id="bar"></i></div>
+  <span class="note" id="cnt"></span>
+</div>
+<div class="late" id="late"></div>
+<div class="box note">
+  <b>الاختبار:</b> يفتح الخميس 22/10 الساعة 6 صباحاً بتوقيت مكة، ويُغلق السبت 24/10 الساعة 12 ليلاً. الأسئلة اختيار من متعدد وصح/خطأ، والعلامة من 25. تنتهي الخطة الجمعة 23/10 بمراجعة عامة.
+</div>
+<h2>خطتك اليومية</h2>
+<div id="days"></div>
+<p class="note">علّم البند حين تنجزه — وإن تأخرت يوماً يُعاد توزيع المتبقي تلقائياً على الأيام الباقية. يُحفظ تقدمك تلقائياً على هذا الجهاز.</p>
+<footer>استعن بالله ولا تعجز ✨</footer>
+</main>
+<script>
+var BOOKS={a:["أنيس الطلاب",52,13,"pill"],n:["النقاية للسيوطي",20,10,"pill n"],m:["مختصر الإتقان",198,12,"pill m"]};
+var units=[];
+["a","n","m"].forEach(function(k){var b=BOOKS[k];for(var s=1;s<=b[1];s+=b[2]){var e=Math.min(s+b[2]-1,b[1]);units.push({id:k+s,k:k,s:s,e:e,p:e-s+1})}});
+var TOTAL=units.reduce(function(a,u){return a+u.p},0);
+var START=new Date(2026,9,17),LAST_STUDY=new Date(2026,9,22),REVIEW=new Date(2026,9,23);
+var DN=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
+function dstr(d){return DN[d.getDay()]+" "+d.getDate()+"/"+(d.getMonth()+1)}
+function mid(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate())}
+var KEY="ulum-plan-ar-v1",done={};
+try{done=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){done={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}}
+var openState={};
+function render(){
+  var now=mid(new Date()),from=now<START?START:now;
+  var studyDays=[];
+  for(var d=new Date(from);d<=LAST_STUDY;d.setDate(d.getDate()+1))studyDays.push(new Date(d));
+  var pending=units.filter(function(u){return !done[u.id]});
+  var left=pending.reduce(function(a,u){return a+u.p},0);
+  var doneP=TOTAL-left;
+  var assign=studyDays.map(function(){return[]});
+  if(studyDays.length){
+    var cum=0,per=left/studyDays.length,di=0;
+    pending.forEach(function(u){
+      var target=(di+1)*per;
+      while(di<studyDays.length-1&&cum>=target-0.5*u.p){di++;target=(di+1)*per}
+      assign[di].push(u);cum+=u.p});
+  }
+  var todayQuota=studyDays.length?assign[0].reduce(function(a,u){return a+u.p},0):left;
+  // lateness vs original plan
+  var origDays=Math.round((LAST_STUDY-START)/864e5)+1,idx=Math.max(0,Math.round((from-START)/864e5));
+  var expected=Math.round(TOTAL*Math.min(idx,origDays)/origDays),late=expected-doneP;
+  var L=document.getElementById("late");
+  if(now>=START&&late>5&&left>0){L.className="late on";L.textContent="أنت متأخر نحو "+late+" صفحة عن الخطة الأصلية، فوُزّع المتبقي على الأيام الباقية: المطلوب اليوم "+todayQuota+" صفحة. لا بأس، واصل بخطى ثابتة."}
+  else if(left===0){L.className="late on";L.style.background="var(--accbg)";L.style.color="var(--acc)";L.textContent="ما شاء الله، أتممت كل المقررات! خصّص بقية الوقت للمراجعة وحلّ أسئلة الصح والخطأ."}
+  else L.className="late";
+  var root=document.getElementById("days");root.innerHTML="";
+  studyDays.forEach(function(d,i){
+    var us=assign[i],pg=us.reduce(function(a,u){return a+u.p},0);
+    var el=document.createElement("div");
+    var isToday=i===0&&now>=START;
+    var key=d.getTime(),isOpen=key in openState?openState[key]:isToday;
+    el.className="day"+(isToday?" today":"")+(isOpen?" open":"");
+    var h=document.createElement("button");h.className="dh";
+    h.innerHTML="<span><strong>"+dstr(d)+"</strong>"+(isToday?'<span class="tag">اليوم</span>':"")+"</span><span class='dm'>"+pg+" صفحة</span>";
+    h.onclick=function(){openState[key]=!el.classList.contains("open");el.classList.toggle("open")};
+    var b=document.createElement("div");b.className="body";
+    if(!us.length){var e=document.createElement("p");e.className="note";e.textContent="لا بنود لهذا اليوم — راجع ما درسته.";b.appendChild(e)}
+    us.forEach(function(u){b.appendChild(mkItem(u))});
+    el.appendChild(h);el.appendChild(b);root.appendChild(el);
+  });
+  var rv=document.createElement("div");rv.className="day rev"+(now>=REVIEW?" open":"");
+  var rh=document.createElement("button");rh.className="dh";
+  rh.innerHTML="<span><strong>"+dstr(REVIEW)+"</strong><span class='tag' style='background:var(--gold)'>مراجعة عامة</span></span><span class='dm'>اليوم الأخير</span>";
+  rh.onclick=function(){rv.classList.toggle("open")};
+  var rb=document.createElement("div");rb.className="body";
+  rb.innerHTML="<p class='note' style='margin:0 0 6px'>لا مقرر جديد: ارجع إلى العناوين والتعريفات في الكتب الثلاثة، وحاول أن تسأل نفسك أسئلة صح وخطأ، ثم نم مبكراً.</p>";
+  if(now>=REVIEW&&pending.length){var t=document.createElement("div");pending.forEach(function(u){t.appendChild(mkItem(u))});rb.appendChild(t)}
+  rv.appendChild(rh);rv.appendChild(rb);root.appendChild(rv);
+  document.getElementById("left").textContent=left;
+  document.getElementById("quota").textContent=todayQuota;
+  var pc=Math.round(doneP/TOTAL*100);
+  document.getElementById("pct").textContent=pc;document.getElementById("bar").style.width=pc+"%";
+  document.getElementById("cnt").textContent="أنجزت "+doneP+" من "+TOTAL+" صفحة";
+}
+function mkItem(u){
+  var l=document.createElement("label"),c=document.createElement("input");c.type="checkbox";c.checked=!!done[u.id];
+  c.onchange=function(){done[u.id]=c.checked;save();render()};
+  var s=document.createElement("span"),b=BOOKS[u.k];
+  s.innerHTML="<span class='"+b[3]+"'>"+b[0]+"</span>ص "+u.s+" – "+u.e+"<small>"+u.p+" صفحة</small>";
+  l.appendChild(c);l.appendChild(s);return l;
+}
+function tick(){
+  var end=Date.UTC(2026,9,24,21,0,0)-Date.now();
+  document.getElementById("dl").textContent=end>0?Math.ceil(end/864e5):0;
+}
+document.getElementById("reset").onclick=function(){if(confirm("تصفير كل التقدم؟")){done={};save();render()}};
+document.getElementById("copy").onclick=function(){
+  var txt="خطتي — علوم القرآن\nالمتبقي: "+document.getElementById("left").textContent+" صفحة\n"+document.getElementById("cnt").textContent;
+  try{navigator.clipboard.writeText(txt);this.textContent="تم النسخ ✓"}catch(e){this.textContent="تعذّر النسخ"}
+  var b=this;setTimeout(function(){b.textContent="نسخ خطتي"},1500)};
+document.getElementById("theme").onclick=function(){
+  var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  r.dataset.theme=dark?"light":"dark";this.textContent=dark?"النمط الداكن":"النمط الفاتح"};
+render();tick();setInterval(tick,60000);
+</script>
+</body>
+</html>
